@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api/monday-briefing';
+const API_URL = 'https://executive-twin.vercel.app/api/monday-briefing';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -29,7 +29,7 @@ function App() {
   const handleGrantPermissions = async () => {
     setAuthStep('processing');
     try {
-      const response = await axios.post('http://localhost:8000/api/authenticate');
+      const response = await axios.post('https://executive-twin.vercel.app/api/authenticate');
       if (response.data.success) {
         setIsAuthenticated(true);
         localStorage.setItem('et_auth', 'true');
