@@ -15,7 +15,7 @@ app = FastAPI()
 # Enable CORS for local React development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://executive-twin-frontend.vercel.app/", "http://localhost:5173"],
+    allow_origins=["http://localhost:3000", "https://executive-twin-frontend.vercel.app/", "http://localhost:5173", "https://executive-twin-frontend.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
